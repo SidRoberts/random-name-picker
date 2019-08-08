@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Vast+Shadow&display=swap');
+
+* {
+    box-sizing: border-box;
+    color: #454845;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    text-align: center;
+}
+
+#main {
+    background: linear-gradient(to right, #F9B733, #FD4A1A);
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper {
+    display: table-cell;
+    font-size: 10em;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#name {
+    color: #FFF;
+    display: none;
+    font-family: 'Vast Shadow', cursive;
+    font-size: 10rem;
+    font-weight: 300;
+    padding: 1rem;
+    text-shadow: 6px 6px 5px #222;
+}
