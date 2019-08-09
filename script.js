@@ -2,6 +2,10 @@ var names = JSON.parse(
     window.localStorage.getItem('names')
 );
 
+if (names == null) {
+    names = [];
+}
+
 names = prompt(
     'Write a comma-separated list of all the names.',
     names.join(', ')
