@@ -1,6 +1,22 @@
-if (typeof names == 'undefined') {
-    alert('Names are not defined');
+var names = JSON.parse(
+    window.localStorage.getItem('names')
+);
+
+names = prompt(
+    'Write a comma-separated list of all the names.',
+    names.join(', ')
+);
+
+if (names == false || names == null) {
+    alert('No names given.');
 }
+
+names = names.split(/\s*,\s*/);
+
+window.localStorage.setItem(
+    'names',
+    JSON.stringify(names)
+);
 
 function getRandomName()
 {
