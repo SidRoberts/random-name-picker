@@ -1,82 +1,82 @@
+/* global $, prompt, alert */
+
 var names = JSON.parse(
-    window.localStorage.getItem('names')
-);
+  window.localStorage.getItem('names')
+)
 
 if (names == null) {
-    names = [];
+  names = []
 }
 
 names = prompt(
-    'Write a comma-separated list of all the names.',
-    names.join(', ')
-);
+  'Write a comma-separated list of all the names.',
+  names.join(', ')
+)
 
-if (names == false || names == null) {
-    alert('No names given.');
+if (names === false || names === null) {
+  alert('No names given.')
 }
 
-names = names.split(/\s*,\s*/);
+names = names.split(/\s*,\s*/)
 
 window.localStorage.setItem(
-    'names',
-    JSON.stringify(names)
-);
+  'names',
+  JSON.stringify(names)
+)
 
-function getRandomName()
-{
-    if (names.length == 0) {
-        return "";
-    }
+function getRandomName () {
+  if (names.length === 0) {
+    return ''
+  }
 
-    key = Math.floor(Math.random() * names.length);
+  var key = Math.floor(Math.random() * names.length)
 
-    name = names[key];
+  var name = names[key]
 
-    names.splice(key, 1);
+  names.splice(key, 1)
 
-    return name;
+  return name
 }
 
-function writeRandomName()
-{
-    fadeTime = 200;
+function writeRandomName () {
+  var fadeTime = 200
 
-    $('#name').fadeOut(
-        fadeTime,
-        function () {
-            name = getRandomName();
+  $('#name').fadeOut(
+    fadeTime,
+    function () {
+      var name = getRandomName()
 
-            if (!name) {
-                return;
-            }
+      if (!name) {
+        return
+      }
 
-            console.log(name);
+      console.log(name)
 
-            $('#name').html(name);
+      $('#name').html(name)
 
-            $('#name').fadeIn(fadeTime);
-        }
-    );
+      $('#name').fadeIn(fadeTime)
+    }
+  )
 }
 
 $(document).ready(
-    function () {
-        $(document).keydown(
-            function (e) {
-                keyCode = (e.keyCode ? e.keyCode : e.which);
+  function () {
+    $(document).keydown(
+      function (e) {
+        var keyCode = (e.keyCode ? e.keyCode : e.which)
 
-                // F keys
-                if (keyCode >= 112 && keyCode <= 123) {
-                    return;
-                }
+        // F keys
+        if (keyCode >= 112 && keyCode <= 123) {
+          return
+        }
 
-                writeRandomName();
-            }
-        );
+        writeRandomName()
+      }
+    )
 
-        $(document).on(
-            'click',
-            writeRandomName
-        );
-    }
-);
+    $(document).on(
+      'click',
+      writeRandomName
+    )
+  }
+)
