@@ -1,4 +1,4 @@
-/* global $, prompt, alert */
+/* global $ */
 
 var names = JSON.parse(
   window.localStorage.getItem('names')
@@ -8,13 +8,13 @@ if (names == null) {
   names = []
 }
 
-names = prompt(
+names = window.prompt(
   'Write a comma-separated list of all the names.',
   names.join(', ')
 )
 
 if (names === false || names === null) {
-  alert('No names given.')
+  window.alert('No names given.')
 }
 
 names = names.split(/\s*,\s*/)
