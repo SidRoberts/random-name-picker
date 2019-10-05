@@ -65,12 +65,15 @@ $(document).ready(
       function (e) {
         var keyCode = (e.keyCode ? e.keyCode : e.which)
 
-        // F keys
-        if (keyCode >= 112 && keyCode <= 123) {
-          return
+        // Left arrow key
+        if (keyCode == 37) {
+          window.location.reload()
         }
 
-        writeRandomName()
+        // Right arrow key
+        if (keyCode == 39) {
+          writeRandomName()
+        }
       }
     )
 
