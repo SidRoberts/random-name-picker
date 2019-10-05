@@ -72,14 +72,14 @@ $(document).ready(
         var keyCode = (e.keyCode ? e.keyCode : e.which)
 
         // Left arrow key
-        if (keyCode == 37) {
+        if (keyCode === 37) {
           names = originalNames.clone()
 
           $('#name').html('')
         }
 
         // Right arrow key
-        if (keyCode == 39) {
+        if (keyCode === 39) {
           writeRandomName()
         }
       }
