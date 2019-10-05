@@ -1,5 +1,9 @@
 /* global $ */
 
+Array.prototype.clone = function () {
+  return this.slice(0)
+}
+
 var names = JSON.parse(
   window.localStorage.getItem('names')
 )
@@ -23,6 +27,8 @@ window.localStorage.setItem(
   'names',
   JSON.stringify(names)
 )
+
+var originalNames = names.clone()
 
 function getRandomName () {
   if (names.length === 0) {
@@ -67,7 +73,9 @@ $(document).ready(
 
         // Left arrow key
         if (keyCode == 37) {
-          window.location.reload()
+          names = originalNames.clone()
+
+          $('#name').html('')
         }
 
         // Right arrow key
