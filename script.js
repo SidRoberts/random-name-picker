@@ -65,6 +65,12 @@ function writeRandomName () {
   )
 }
 
+function resetNames () {
+  names = cloneArray(originalNames)
+
+  $('#name').html('')
+}
+
 $(document).ready(
   function () {
     $(document).keydown(
@@ -73,9 +79,7 @@ $(document).ready(
 
         // Left arrow key
         if (keyCode === 37) {
-          names = cloneArray(originalNames)
-
-          $('#name').html('')
+          resetNames()
         }
 
         // Right arrow key
