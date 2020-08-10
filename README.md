@@ -8,7 +8,7 @@ Names are only shown once and then removed from subsequent random draws.
 It's designed to be used with a presentation clicker -
 right arrow key progresses to the next name, left arrow key refreshes the list and starts over.
 
-[![Build Status](https://img.shields.io/travis/SidRoberts/random-name-generator/master.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/random-name-generator)
+[![Build Status](https://img.shields.io/travis/SidRoberts/random-name-generator/development.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/random-name-generator)
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/random-name-generator.svg?style=for-the-badge)](https://github.com/SidRoberts/random-name-generator/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/random-name-generator.svg?style=for-the-badge)](https://github.com/SidRoberts/random-name-generator/pulls)
