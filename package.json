@@ -1,8 +1,12 @@
 {
+  "dependencies": {
+    "sass": "*"
+  },
   "devDependencies": {
     "standard": "*"
   },
   "scripts": {
-    "test": "node_modules/.bin/standard"
+    "build-css": "node_modules/.bin/sass styles.sass > styles.css",
+    "test":      "node_modules/.bin/standard"
   }
 }

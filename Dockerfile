@@ -4,9 +4,9 @@ WORKDIR /app/
 
 COPY . .
 
-RUN npm -g install sass
+RUN npm install
 
-RUN sass styles.sass > styles.css
+RUN npm run build-css
 
 RUN rm styles.sass
 
