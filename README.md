@@ -20,7 +20,7 @@ Access via [https://sidroberts.co.uk/random-name-picker](https://sidroberts.co.u
 Alternatively, use the Docker image [`sidroberts/random-name-picker`](https://hub.docker.com/repository/docker/sidroberts/random-name-picker):
 
 ```bash
-docker run -p 80:80 sidroberts/random-name-picker
+docker run --rm -p 80:80 sidroberts/random-name-picker
 ```
 
 ## License
